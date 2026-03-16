@@ -1,101 +1,46 @@
-# capstone
-Making an AI IDS website for cyber attack 
-🚀 AI-Powered Intrusion Detection System for SDN
-Full Stack + DevOps Capstone Project
+🧠 AI-Based IDS for SDN
 
-
-
-
-
-
-
-
-
-
-This project implements an AI-powered Intrusion Detection System (IDS) for Software Defined Networks (SDN) with a modern DevOps workflow.
-
-The system provides real-time monitoring, machine learning based attack detection, and administrative control through a dashboard interface.
-
-It is built using a full stack architecture and deployed using Docker containers with CI/CD automation through Jenkins pipelines.
-
-📌 Project Objective
-
-Traditional networks struggle to detect sophisticated cyber attacks in real time.
-
-This project aims to:
-
-Monitor network traffic in an SDN environment
-
-Detect malicious activity using AI/ML models
-
-Provide real-time monitoring dashboards
-
-Automate deployment with DevOps practices
-
-🧠 AI-Based IDS in SDN
-
-The system integrates Machine Learning based IDS with Software Defined Networking (SDN).
+The system integrates Machine Learning based intrusion detection with Software Defined Networking.
 
 Key Capabilities
 
-• Real-time network traffic monitoring
-• AI-based attack detection
-• Flow statistics analysis
-• Traffic classification (Normal / Malicious)
-• Admin monitoring dashboard
+• Real-time traffic monitoring
+• Machine learning attack detection
+• Traffic classification (Normal / Attack)
+• Network flow statistics analysis
 • Alert and log management
+• Administrative control dashboard
 
-The system can identify:
+The system can detect:
 
 DDoS attacks
 
-abnormal traffic patterns
+abnormal traffic flows
 
-suspicious network flows
+malicious packets
 
-malicious packet behavior
+suspicious network patterns
 
 🏗 System Architecture
-                +--------------------+
-                |      User/Admin    |
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                |   React Dashboard  |
-                | (Traffic Monitoring|
-                | Intrusion Detection|
-                | Alerts & Logs)     |
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                | Node.js Backend API|
-                |  Authentication    |
-                |  IDS Integration   |
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                |  Machine Learning  |
-                | IDS Detection Model|
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                | Database           |
-                | MongoDB/PostgreSQL |
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                | Docker Containers  |
-                +----------+---------+
-                           |
-                           v
-                +--------------------+
-                | Jenkins CI/CD      |
-                +--------------------+
+User / Administrator
+        │
+        ▼
+React Dashboard (Monitoring Interface)
+        │
+        ▼
+Node.js Backend API
+        │
+        ▼
+AI/ML Intrusion Detection Model
+        │
+        ▼
+Database (MongoDB / PostgreSQL)
+        │
+        ▼
+Docker Containers
+        │
+        ▼
+Jenkins CI/CD Pipeline
 ⚙️ Technology Stack
 Frontend
 
@@ -113,11 +58,13 @@ Node.js
 
 Express.js
 
-REST APIs
+REST API
 
 Database
 
-MongoDB / PostgreSQL
+MongoDB
+
+PostgreSQL
 
 DevOps
 
@@ -125,36 +72,42 @@ Docker
 
 Docker Compose
 
-Jenkins
+Jenkins CI/CD
 
 Security
 
 JWT Authentication
 
-AI / IDS
+Machine Learning
 
-Machine Learning model for traffic classification
+AI-based traffic classification model
 
 🔐 Key Features
 JWT Authentication
 
-Secure login system using JSON Web Tokens
+Secure login system using JSON Web Tokens (JWT).
 
-Protected API routes
+Features:
 
-Role-based admin access
+Protected API endpoints
+
+Secure user sessions
+
+Admin authentication
 
 Database Integration
 
 The system stores:
 
-user credentials
+user authentication data
 
-network traffic logs
+traffic logs
 
 IDS detection results
 
-system alerts
+security alerts
+
+system events
 
 Supported databases:
 
@@ -164,62 +117,51 @@ PostgreSQL
 
 📊 AI-Powered IDS Dashboard
 
-The dashboard allows administrators to:
+The dashboard enables administrators to:
 
-• Monitor real-time network traffic
-• View IDS detection results
+• Monitor network traffic
+• View intrusion detection results
 • Analyze flow statistics
-• Track suspicious activity
-• Manage alerts and logs
+• Track security alerts
+• Manage logs and events
 
 📸 Project Screenshots
-Jenkins CI/CD Pipeline (Working)
+Jenkins CI/CD Pipeline
 
-This screenshot shows the automated Jenkins pipeline executing build and verification stages.
+Shows automated pipeline execution including build and verification stages.
 
-Pipeline stages include:
-
-Checkout source code
-
-Verify project files
-
-Build application
-
-Post build actions
-
-AI-Powered IDS Dashboard
 Dashboard Overview
 
-Displays real-time monitoring metrics such as:
+Real-time monitoring metrics:
 
-Active connections
+active connections
 
-Attack detections
+detected attacks
 
-network activity statistics
+network traffic statistics
 
 Traffic Monitoring
 
-Provides detailed flow statistics for network traffic analysis.
+Displays network flow statistics and traffic details.
 
 Intrusion Detection
 
-Controls the IDS model execution and displays classification results.
+Controls the machine learning IDS model and shows classification results.
 
-Alerts & Logs
+Alerts and Logs
 
-Displays security alerts and system events.
+Displays security alerts and system activity logs.
 
 📂 Project Structure
-CAPSTONE
+AI-Powered-Intrusion-Detection-System-for-SDN
 │
 ├── backend
 │   ├── config
 │   ├── controllers
 │   ├── models
 │   ├── routes
-│   ├── Dockerfile
 │   ├── server.js
+│   ├── Dockerfile
 │   └── package.json
 │
 ├── frontend
@@ -233,11 +175,56 @@ CAPSTONE
 ├── Jenkinsfile
 ├── jenkins-docker
 └── README.md
-🐳 Running the Project
-Clone the Repository
-git clone https://github.com/yourusername/ai-ids-sdn.git
-cd ai-ids-sdn
-Run using Docker
+⚙️ Backend Setup
+
+Before running the backend server, install required dependencies.
+
+Navigate to the backend directory:
+
+cd backend
+
+Install dependencies:
+
+npm install
+
+This command will create the node_modules folder automatically.
+
+📦 Installing Express
+
+If Express is not installed, install it using:
+
+npm install express
+
+Backend structure after installation:
+
+backend
+│
+├── config
+├── controllers
+├── models
+├── routes
+├── node_modules
+├── package.json
+├── package-lock.json
+└── server.js
+▶ Running the Backend Server
+
+Run the backend server:
+
+node server.js
+
+Or using nodemon:
+
+npx nodemon server.js
+🐳 Running the Project with Docker
+
+Clone the repository:
+
+git clone https://github.com/Satya-Anand/AI-Powered-Intrusion-Detection-System-for-SDN.git
+cd AI-Powered-Intrusion-Detection-System-for-SDN
+
+Run containers:
+
 docker-compose up --build
 
 This will start:
@@ -246,13 +233,13 @@ frontend container
 
 backend container
 
-database container
+database services
 
-🔄 CI/CD Pipeline
+🔄 Jenkins CI/CD Pipeline
 
-The Jenkins pipeline automates:
+The Jenkins pipeline automates the following steps:
 
-1️⃣ Code checkout from repository
+1️⃣ Source code checkout
 2️⃣ Build verification
 3️⃣ Docker image build
 4️⃣ Container deployment
@@ -268,13 +255,13 @@ advanced ML model training
 
 cloud deployment (AWS / GCP)
 
+automated threat mitigation
+
 network visualization graphs
 
 IDS performance metrics
 
 security hardening
-
-automated threat mitigation
 
 👨‍💻 Author
 
@@ -298,9 +285,9 @@ Data Analytics
 If you like this project:
 
 ⭐ Star the repository
-🍴 Fork the project
-📩 Provide suggestions
+🍴 Fork the repository
+📩 Share suggestions
 
 📜 License
 
-This project is for academic and research purposes.
+This project is created for academic and research purposes.
