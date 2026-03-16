@@ -1,183 +1,204 @@
-🧠 AI-Based IDS for SDN
+# 🚀 AI-Powered Intrusion Detection System for SDN
 
-The system integrates Machine Learning based intrusion detection with Software Defined Networking.
+![Node](https://img.shields.io/badge/Node.js-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-red)
+![Status](https://img.shields.io/badge/Project-Active-success)
 
-Key Capabilities
+An **AI-powered Intrusion Detection System (IDS) for Software Defined Networks (SDN)** designed to monitor network traffic and detect malicious activity using **machine learning techniques**.
 
-• Real-time traffic monitoring
-• Machine learning attack detection
-• Traffic classification (Normal / Attack)
-• Network flow statistics analysis
-• Alert and log management
-• Administrative control dashboard
+This project also demonstrates **DevOps practices** including **Docker containerization and Jenkins CI/CD automation**. The system is designed to support real-time monitoring and automated deployment workflows.
 
-The system can detect:
+---
 
-DDoS attacks
+# 📌 Project Overview
 
-abnormal traffic flows
+Modern networks face increasing cybersecurity threats. Traditional monitoring tools often struggle to detect sophisticated attacks.
 
-malicious packets
+This project aims to build a **machine learning-based IDS integrated with SDN architecture** to:
 
-suspicious network patterns
+* Monitor network traffic in real time
+* Detect abnormal network behavior
+* Classify malicious network traffic
+* Provide an administrative monitoring interface
+* Automate build and deployment using DevOps tools
 
-🏗 System Architecture
+---
+
+# 🧠 AI-Based IDS for SDN
+
+The system integrates **Machine Learning based intrusion detection** with **Software Defined Networking (SDN)**.
+
+### Key Capabilities
+
+* Real-time network traffic monitoring
+* Machine learning based attack detection
+* Traffic classification (Normal / Malicious)
+* Network flow analysis
+* Alert and event logging
+* Administrative monitoring dashboard (under development)
+
+Potential attack detections include:
+
+* DDoS attacks
+* abnormal traffic flows
+* malicious packets
+* suspicious network behavior
+
+---
+
+# 🏗 System Architecture
+
 User / Administrator
-        │
-        ▼
-React Dashboard (Monitoring Interface)
-        │
-        ▼
+│
+▼
+React Dashboard (Monitoring Interface – In Development)
+│
+▼
 Node.js Backend API
-        │
-        ▼
-AI/ML Intrusion Detection Model
-        │
-        ▼
+│
+▼
+AI / ML Intrusion Detection Model
+│
+▼
 Database (MongoDB / PostgreSQL)
-        │
-        ▼
+│
+▼
 Docker Containers
-        │
-        ▼
+│
+▼
 Jenkins CI/CD Pipeline
-⚙️ Technology Stack
-Frontend
 
-React.js
+---
 
-Tailwind CSS
+# ⚙️ Technology Stack
 
-JavaScript
+## Frontend
 
-HTML5
+* React.js
+* Tailwind CSS
+* JavaScript
+* HTML5
 
-Backend
+## Backend
 
-Node.js
+* Node.js
+* Express.js
+* REST APIs
 
-Express.js
+## Database
 
-REST API
+* MongoDB
+* PostgreSQL
 
-Database
+## DevOps
 
-MongoDB
+* Docker
+* Docker Compose
+* Jenkins CI/CD
 
-PostgreSQL
+## Security
 
-DevOps
+* JWT Authentication
 
-Docker
+## Machine Learning
 
-Docker Compose
+* AI-based network traffic classification model
 
-Jenkins CI/CD
+---
 
-Security
+# 🔐 Key Features
 
-JWT Authentication
+## JWT Authentication
 
-Machine Learning
-
-AI-based traffic classification model
-
-🔐 Key Features
-JWT Authentication
-
-Secure login system using JSON Web Tokens (JWT).
+Secure authentication system using **JSON Web Tokens (JWT)**.
 
 Features:
 
-Protected API endpoints
+* Protected API routes
+* Secure user authentication
+* Token-based authorization
 
-Secure user sessions
+---
 
-Admin authentication
+## Database Integration
 
-Database Integration
+The system stores important operational data including:
 
-The system stores:
-
-user authentication data
-
-traffic logs
-
-IDS detection results
-
-security alerts
-
-system events
+* user authentication data
+* network traffic logs
+* IDS detection results
+* security alerts
+* system activity records
 
 Supported databases:
 
-MongoDB
+* MongoDB
+* PostgreSQL
 
-PostgreSQL
+---
 
-📊 AI-Powered IDS Dashboard
+## 📊 IDS Monitoring Dashboard
 
-The dashboard enables administrators to:
+A monitoring dashboard is being developed to provide administrators with a visual interface for:
 
-• Monitor network traffic
-• View intrusion detection results
-• Analyze flow statistics
-• Track security alerts
-• Manage logs and events
+* network traffic monitoring
+* intrusion detection results
+* flow statistics analysis
+* alert and log monitoring
 
-📸 Project Screenshots
-Jenkins CI/CD Pipeline
+⚠️ The dashboard interface is currently **under development**.
 
-Shows automated pipeline execution including build and verification stages.
+---
 
-Dashboard Overview
+# 📸 Project Screenshot
 
-Real-time monitoring metrics:
+## Jenkins CI/CD Pipeline
 
-active connections
+The project integrates a **working Jenkins pipeline** to automate parts of the development workflow.
 
-detected attacks
+The pipeline performs tasks such as:
 
-network traffic statistics
+* source code checkout
+* project file verification
+* build checks
+* automated pipeline execution
 
-Traffic Monitoring
+![Jenkins Pipeline](docs/jenkins_pipeline.png)
 
-Displays network flow statistics and traffic details.
+---
 
-Intrusion Detection
+# 📂 Project Structure
 
-Controls the machine learning IDS model and shows classification results.
-
-Alerts and Logs
-
-Displays security alerts and system activity logs.
-
-📂 Project Structure
 AI-Powered-Intrusion-Detection-System-for-SDN
-│
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── server.js
-│   ├── Dockerfile
-│   └── package.json
-│
-├── frontend
-│   ├── public
-│   ├── src
-│   ├── Dockerfile
-│   ├── tailwind.config.js
-│   └── package.json
-│
-├── docker-compose.yml
-├── Jenkinsfile
-├── jenkins-docker
-└── README.md
-⚙️ Backend Setup
 
-Before running the backend server, install required dependencies.
+backend
+├── config
+├── controllers
+├── models
+├── routes
+├── server.js
+├── Dockerfile
+└── package.json
+
+frontend
+├── public
+├── src
+├── Dockerfile
+├── tailwind.config.js
+└── package.json
+
+docker-compose.yml
+Jenkinsfile
+jenkins-docker
+README.md
+
+---
+
+# ⚙️ Backend Setup
+
+Before running the backend server, install the required dependencies.
 
 Navigate to the backend directory:
 
@@ -187,18 +208,19 @@ Install dependencies:
 
 npm install
 
-This command will create the node_modules folder automatically.
+This command automatically creates the **node_modules folder** and installs all packages listed in `package.json`.
 
-📦 Installing Express
+---
+
+# 📦 Installing Express
 
 If Express is not installed, install it using:
 
 npm install express
 
-Backend structure after installation:
+After installation, the backend directory will include:
 
 backend
-│
 ├── config
 ├── controllers
 ├── models
@@ -207,87 +229,99 @@ backend
 ├── package.json
 ├── package-lock.json
 └── server.js
-▶ Running the Backend Server
 
-Run the backend server:
+The **node_modules directory contains all backend dependencies required to run the application**.
+
+---
+
+# ▶ Running the Backend Server
+
+Start the backend server using:
 
 node server.js
 
-Or using nodemon:
+Or with nodemon:
 
 npx nodemon server.js
-🐳 Running the Project with Docker
+
+---
+
+# 🐳 Running the Project with Docker
 
 Clone the repository:
 
 git clone https://github.com/Satya-Anand/AI-Powered-Intrusion-Detection-System-for-SDN.git
+
+Navigate into the project directory:
+
 cd AI-Powered-Intrusion-Detection-System-for-SDN
 
-Run containers:
+Run the containers:
 
 docker-compose up --build
 
 This will start:
 
-frontend container
+* frontend container
+* backend container
+* database services
 
-backend container
+---
 
-database services
+# 🔄 Jenkins CI/CD Pipeline
 
-🔄 Jenkins CI/CD Pipeline
+The Jenkins pipeline automates development tasks including:
 
-The Jenkins pipeline automates the following steps:
-
-1️⃣ Source code checkout
-2️⃣ Build verification
-3️⃣ Docker image build
-4️⃣ Container deployment
+1. Source code checkout
+2. Build verification
+3. Pipeline execution
+4. Build status reporting
 
 Pipeline configuration is defined in:
 
 Jenkinsfile
-🚧 Future Improvements
 
-Planned improvements:
+---
 
-advanced ML model training
+# 🚧 Future Improvements
 
-cloud deployment (AWS / GCP)
+Planned enhancements include:
 
-automated threat mitigation
+* advanced ML model training
+* cloud deployment (AWS / GCP)
+* automated threat mitigation
+* network visualization tools
+* IDS performance metrics
+* enhanced security controls
 
-network visualization graphs
+---
 
-IDS performance metrics
+# 👨‍💻 Author
 
-security hardening
-
-👨‍💻 Author
-
-Satya Anand
+**Satya Pragy Anand**
 
 B.Tech Computer Science
 NIIT University
 
 Interests:
 
-Cybersecurity
+* Cybersecurity
+* DevOps
+* AI Security
+* Data Analytics
 
-DevOps
+---
 
-AI Security
+# ⭐ Support
 
-Data Analytics
-
-⭐ Support
-
-If you like this project:
+If you find this project useful:
 
 ⭐ Star the repository
 🍴 Fork the repository
-📩 Share suggestions
+📩 Share feedback or suggestions
 
-📜 License
+---
 
-This project is created for academic and research purposes.
+# 📜 License
+
+This project is created for **academic and research purposes**.
